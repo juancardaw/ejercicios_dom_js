@@ -1,12 +1,13 @@
 // 1.1 Añade un botón a tu html con el id btnToClick y en tu javascript añade el 
 // evento click que ejecute un console log con la información del evento del click
 const boton = document.createElement("button");
+const click = document.querySelector("input.click")
 boton.id = "btnToClick";
 boton.textContent = "boton"
 document.body.appendChild(boton);
 
 boton.addEventListener("click", () => {
-    console.log("El valor del click es: ", event);
+    console.log("El valor input con la clase click bro es: ", click.value );
 });
 
 
@@ -15,15 +16,15 @@ boton.addEventListener("click", () => {
 const focus = document.querySelector("input.focus");
 
 focus.addEventListener("focus", () => {
-   console.log("El valor del focus bro es: ", event);
+   console.log("El valor del input con la clase focus bro es: ", focus.value);
 });
 
 
 // 1.3 Añade un evento 'input' que ejecute un console.log con el valor del input.
-const input = document.querySelector("input.value");
+const inputValue = document.querySelector("input.value");
 
-input.addEventListener("input", () => {
-    console.log("El valor del input bro es: ", event);
+inputValue.addEventListener("input", () => {
+    console.log("El valor del input con la clase Value bro es: ", inputValue.value);
 });
 
 
